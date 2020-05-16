@@ -1,0 +1,193 @@
+body{
+	margin :0;
+	padding:0;
+	font-family: verdana;
+}
+.circle-range-select {
+   display:none;
+}
+.head{
+	padding-left: 500px;
+
+}
+.head input{
+	
+	width:300px;
+	border:0;
+	outline: none;
+	border-bottom: 1px solid #4682B4;
+	padding-top: 50px;
+	text-align: center;
+	color: #0000FF;
+	font-size: 25px
+
+}
+.main{
+	margin:15px;
+	padding:15px;
+	display: flex;
+	
+}
+.row1{
+
+	display: block;
+	flex-grow: 1;
+    text-align: center;
+    
+    margin:50px;
+}
+.row2{
+	text-align: center;
+	margin: 50px;
+	display: block;
+	flex-grow:1;
+	
+	
+}
+.center-text{
+	text-align: center;
+	color: #F5FFFA;
+	background-color:#87CEEB ;
+	border-left: 5px solid #4682B4 ;
+	border-radius: 0px 10px 10px 0px;
+}
+
+
+#hand_right .rs-range-color  {
+    background-color: #33B5E5;
+}
+#hand_right .rs-path-color  {
+    background-color: #C2E9F7;
+}
+#hand_right .rs-handle  {
+    background-color: #C2E9F7;
+    padding: 7px;
+    border: 2px solid #C2E9F7;
+}
+#hand_right .rs-handle.rs-focus  {
+    border-color: #33B5E5;
+}
+#hand_right .rs-handle:after  {
+    border-color: #33B5E5;
+    background-color: #33B5E5;
+}
+#hand_right .rs-border  {
+    border-color: transparent;
+}
+
+
+
+#hand_left .rs-range-color  {
+    background-color: #33B5E5;
+}
+#hand_left .rs-path-color  {
+    background-color: #C2E9F7;
+}
+#hand_left .rs-handle  {
+    background-color: #C2E9F7;
+    padding: 7px;
+    border: 2px solid #C2E9F7;
+}
+#hand_left .rs-handle.rs-focus  {
+    border-color: #33B5E5;
+}
+#hand_left .rs-handle:after  {
+    border-color: #33B5E5;
+    background-color: #33B5E5;
+}
+#hand_left .rs-border  {
+    border-color: transparent;
+}
+
+
+#elbow .rs-range-color  {
+    background-color: #33B5E5;
+}
+#elbow .rs-path-color  {
+    background-color: #C2E9F7;
+}
+#elbow .rs-handle  {
+    background-color: #C2E9F7;
+    padding: 7px;
+    border: 2px solid #C2E9F7;
+}
+#elbow .rs-handle.rs-focus  {
+    border-color: #33B5E5;
+}
+#elbow .rs-handle:after  {
+    border-color: #33B5E5;
+    background-color: #33B5E5;
+}
+#elbow .rs-border  {
+    border-color: transparent;
+}
+
+
+
+#shoulder .rs-range-color  {
+    background-color: #33B5E5;
+}
+#shoulder .rs-path-color  {
+    background-color: #C2E9F7;
+}
+#shoulder .rs-handle  {
+    background-color: #C2E9F7;
+    padding: 7px;
+    border: 2px solid #C2E9F7;
+}
+#shoulder .rs-handle.rs-focus  {
+    border-color: #33B5E5;
+}
+#shoulder .rs-handle:after  {
+    border-color: #33B5E5;
+    background-color: #33B5E5;
+}
+#shoulder .rs-border  {
+    border-color: transparent;
+}
+
+
+#wrist .rs-range-color  {
+    background-color: #33B5E5;
+}
+#wrist .rs-path-color  {
+    background-color: #C2E9F7;
+}
+#wrist .rs-handle  {
+    background-color: #C2E9F7;
+    padding: 7px;
+    border: 2px solid #C2E9F7;
+}
+#wrist .rs-handle.rs-focus  {
+    border-color: #33B5E5;
+}
+#wrist .rs-handle:after  {
+    border-color: #33B5E5;
+    background-color: #33B5E5;
+}
+#wrist .rs-border  {
+    border-color: transparent;
+}
+
+
+#speed .rs-range-color  {
+    background-color: #33B5E5;
+}
+#speed .rs-path-color  {
+    background-color: #C2E9F7;
+}
+#speed .rs-handle  {
+    background-color: #C2E9F7;
+    padding: 7px;
+    border: 2px solid #C2E9F7;
+}
+#speed .rs-handle.rs-focus  {
+    border-color: #33B5E5;
+}
+#speed .rs-handle:after  {
+    border-color: #33B5E5;
+    background-color: #33B5E5;
+}
+#speed .rs-border  {
+    border-color: transparent;
+}

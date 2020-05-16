@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Dashboard | Squirrel Bot</title>
+  <!-- Bootstrap core CSS-->
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <!-- Custom fonts for this template
+  <link href="font-awesome.min.css" rel="stylesheet" type="text/css">-->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/roundSlider/1.3.3/roundslider.min.css'>
+
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+  <!--<link rel="icon" href="HomeAutomation.png"> -->
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand text-center" href="index.html">
+      <!--<img src="HomeAutomation.png" width="50">--> Squirrel Bot </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" onclick="dash()"> <i class="fa fa-fw fa-dashboard"></i> <span class="nav-link-text">Dashboard</span> </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Feedback">
+          <a class="nav-link" onclick="feedback()"> <i class="fa fa-fw	fa-envelope"></i> <span class="nav-link-text">Feedback</span> </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler"> <i class="fa fa-fw fa-angle-left"></i> </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="content-wrapper">
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center"> <small>Copyright © Sagar 2019</small> </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top"> <i class="fa fa-angle-up"></i> </a>
+    <br/>
+    <div class="container" id="Dash">
+     <!-- <div class="head">
+		
+		<input  type="text" id="ip" name="ip" placeholder="IP"><br>
+	</div>-->
+
+
+
+	<div class ="main">
+		<div class="row1">
+		<div class= "hand1">
+			<div class="center-text"><h2>Hand right</h2></div>
+			<center><div id="hand_right"></div></center>
+		</div><br>
+		<div class= "hand1">
+			<div class="center-text"><h2>Hand left</h2></div>
+			<center><div id="hand_left"></div></center>
+		</div><br>
+		<div class= "elbow">
+			<div class="center-text"><h2>Elbow</h2></div>
+			<center><div id="elbow"></div></center>
+		</div><br><br>
+
+
+		<div class="row2">
+		<div class= "shoulder">
+			<div class="center-text"><h2>Shoulder</h2></div>
+			<center><div id="shoulder"></div></center>
+		</div><br>
+		<div class= "wrist">
+			<div class="center-text"><h2>Wrist</h2></div>
+			<center><div id="wrist"></div></center>
+		</div><br>
+		<div class= "speed">
+			<div class="center-text"><h2>Speed</h2></div>
+			<center><div id="speed"></div></center>
+		</div>
+	</div>
+	</div>
+	</div>
+    </div>
+	
+    <div class="container hide" id="Feedback">
+      <div class="row">
+        <div class="col-md-12">
+          <form onsubmit="feedBack(); return false;">
+          <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="Name" class="form-control" placeholder="Enter name" maxlength="32" required autofocus>
+          </div>
+          <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="Email" class="form-control" placeholder="Enter email" maxlength="32" required>
+          <span id="invalid" style="color:red"></span>
+          </div>
+          <div class="form-group">
+          <label for="message">Message</label>
+          <textarea type="text" name="Message" id="message" class="form-control" placeholder="Enter message" rows="3" required></textarea>
+          </div>
+          <br/>
+          <button type="submit" class="btn btn-primary">Send</button>
+          <!--<button type="submit" onclick="$('input').val('');$('textarea').val('');" class="btn btn-danger">Clear</button>-->
+          <button type="reset" class="btn btn-danger">Clear</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--<script src="jquery.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--<script src="bootstrap.bundle.min.js"></script>-->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/roundSlider/1.3.3/roundslider.min.js'></script>
+    <!-- Custom scripts for all pages-->
+    <script>
+	/*!
+ * Start Bootstrap - SB Admin v4.0.0-beta.2 (https://startbootstrap.com/template-overviews/sb-admin)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-sb-admin/blob/master/LICENSE)
+ */
+!function(e){"use strict";e('.navbar-sidenav [data-toggle="tooltip"]').tooltip({template:'<div class="tooltip navbar-sidenav-tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'}),e("#sidenavToggler").click(function(o){o.preventDefault(),e("body").toggleClass("sidenav-toggled"),e(".navbar-sidenav .nav-link-collapse").addClass("collapsed"),e(".navbar-sidenav .sidenav-second-level, .navbar-sidenav .sidenav-third-level").removeClass("show")}),e(".navbar-sidenav .nav-link-collapse").click(function(o){o.preventDefault(),e("body").removeClass("sidenav-toggled")}),e("body.fixed-nav .navbar-sidenav, body.fixed-nav .sidenav-toggler, body.fixed-nav .navbar-collapse").on("mousewheel DOMMouseScroll",function(e){var o=e.originalEvent,a=o.wheelDelta||-o.detail;this.scrollTop+=30*(a<0?1:-1),e.preventDefault()}),e(document).scroll(function(){e(this).scrollTop()>100?e(".scroll-to-top").fadeIn():e(".scroll-to-top").fadeOut()}),e('[data-toggle="tooltip"]').tooltip(),e(document).on("click","a.scroll-to-top",function(o){var a=e(this);e("html, body").stop().animate({scrollTop:e(a.attr("href")).offset().top},1e3,"easeInOutExpo"),o.preventDefault()})}(jQuery);
+
+
+      function feedback() {
+        document.title="Feedback | Squirrel Bot";$('#Feedback').removeClass('hide');$('#Dash').addClass('hide');$('#navbarResponsive').removeClass('show');
+      }
+      function dash() {
+        document.title="Dashboard | Squirrel Bot";$('#Dash').removeClass('hide');$('#Feedback').addClass('hide');$('#navbarResponsive').removeClass('show');
+      }
+
+      var Socket = new WebSocket('ws://' + window.location.hostname + '/ws');    
+	  
+          $("#hand_right").roundSlider({
+          	radius: 80,
+            width: 8,
+             handleSize: "+16",
+            handleShape: "dot",
+            sliderType: "min-range",
+            min:25,
+            max:125,
+             value: 0 ,
+             change: function(event) {
+        var values = event.value;
+        Socket.send("s1:" + values)
+            }     
+           });
+          $("#hand_left").roundSlider({
+          	radius: 80,
+            width: 8,
+             handleSize: "+16",
+            handleShape: "dot",
+            sliderType: "min-range",
+            min:25,
+            max:125,
+             value: 0,
+             change: function(event) {
+        var values = event.value;
+        Socket.send("s2:" + values)
+              }   
+              });
+          $("#elbow").roundSlider({
+          	radius: 80,
+            width: 8,
+             handleSize: "+16",
+            handleShape: "dot",
+            sliderType: "min-range",
+            min:20,
+            max:180,
+             value: 0 ,
+           change: function(event) {
+        var values = event.value;
+        Socket.send("s3:" + values)
+      }});
+          $("#shoulder").roundSlider({
+          	radius: 80,
+            width: 8,
+             handleSize: "+16",
+            handleShape: "dot",
+            sliderType: "min-range",
+            min:100,
+            max:180,
+             value: 0 ,
+           change: function(event) {
+        var values = event.value;
+        Socket.send("s4:" + values)
+      }});
+          $("#wrist").roundSlider({
+          	radius: 80,
+            width: 8,
+             handleSize: "+16",
+            handleShape: "dot",
+            sliderType: "min-range",
+             value: 0,
+             min:0,
+             max:180,
+             change: function(event) {
+        var values = event.value;
+        Socket.send("s5:" + values)
+        } });
+          $("#speed").roundSlider({
+          	radius: 80,
+            width: 8,
+             handleSize: "+16",
+            handleShape: "dot",
+            sliderType: "min-range",
+             value: 0,
+             change: function(event) {
+        var values = event.value;
+        Socket.send("s6:" + values)
+        } });
+	  
+      /*function validate(email) {
+        var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(!email.match(mailFormat)){responsiveVoice.speak("Please enter a valid email.");document.getElementById('invalid').innerHTML = "Please enter a valid email"; return 0;}else{document.getElementById('invalid').innerHTML = ""; return 1;}
+      }*/
+      function feedBack(){
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var message = $('#message').val();
+        //if(validate(email) && !blank(name, message)){
+        //var url = "https://maker.ifttt.com/trigger/feedback_received/with/key/bop6c6sF3ixxN5H1x6Vms8";
+        //Socket.send("Feedback: " + name);
+        responsiveVoice.speak("Thanks for your feedback " + name);
+        //$.post(url, {value1:name,value2:email,value3:message}, alert("Thanks for your feedback " + name));}
+        $.get("/feedback", {Name:name,Email:email,Message:message}, alert("Thanks for your feedback " + name));
+      }
+
+	</script>
+  </div>
+</body>
+
+</html>
